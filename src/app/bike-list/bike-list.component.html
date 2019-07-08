@@ -24,7 +24,7 @@
     <br>
     <div class="form-group">
       <label for="dateOfpick">Pick up Date</label>
-      <input id="dateOfpick" class="form-control" name="dateOfpick" [(ngModel)]="dateOfpick" type="text" bsDatepicker
+      <input id="dateOfpick" autocomplete="off" class="form-control" name="dateOfpick" [(ngModel)]="dateOfpick" type="text" bsDatepicker
         [ngModelOptions]="{standalone: true}" class="form-control" />
 
     </div>
@@ -32,7 +32,7 @@
     <br>
     <div class="form-group">
       <label for="dateOfDrop">Drop Off Date</label>
-      <input class="form-control" id="dateOfDrop" name="dateOfDrop" [ngModelOptions]="{standalone: true}"
+      <input autocomplete="off" class="form-control" id="dateOfDrop" name="dateOfDrop" [ngModelOptions]="{standalone: true}"
         [(ngModel)]="dateOfdrop" type="text" bsDatepicker class="form-control" />
     </div>
     <label for="dateOfTime">Drop Off Time</label>
@@ -47,7 +47,7 @@
 
 
   <div   *ngIf="Submit">
-    <h2> Price Table</h2>
+    <h2> Price Description</h2>
       <h4>
         <table style="width:90%">
           <tr>
