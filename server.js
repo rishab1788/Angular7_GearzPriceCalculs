@@ -2,11 +2,11 @@ const express = require('express');
 const path = require ('path');
 const app =express();
 
-app.use(express.static('./dist'));
+app.use(express.static('./dist/GearzPriceCalculator'));
 
 app.get('/*', (req,res)=>{
     
-res.sendFile(path.join(__dirname +'/dist/angfire6/index.html'));
+res.sendFile(path.join(__dirname +'/dist/GearzPriceCalculator/index.html'));
 
 });
 
