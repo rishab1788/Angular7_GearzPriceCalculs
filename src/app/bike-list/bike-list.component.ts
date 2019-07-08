@@ -1,4 +1,3 @@
-
 import { GearzBike } from './../gearz-bike';
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
@@ -13,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 
 @NgModule({
-
+ 
   imports: [
     CommonModule,
     FormsModule,
@@ -52,6 +51,10 @@ export class BikeListComponent implements OnInit {
     var diffTime = Math.round((picktime - droptime) / onehour);
     var diffDays = Math.round(Math.abs((this.dateOfpick.getTime() - this.dateOfdrop.getTime()) / (oneDay)));
     this.totaldays = diffDays;
+    if(diffTime<-7  ){
+this.totaldays++;
+this.weekDay++;
+    }
     console.log(diffTime);
     console.log(this.picktime);
     console.log(diffDays);
@@ -59,7 +62,10 @@ export class BikeListComponent implements OnInit {
     while (diffDays--) {
       if (i % 7 == 0 || i % 7 == 6) {
         this.weekEnd++;
-      } else { this.weekDay++; }
+      }
+       else { 
+         this.weekDay++; 
+        }
       i++;
     }
     console.log('number of weekend' + this.weekEnd);
@@ -76,8 +82,7 @@ export class BikeListComponent implements OnInit {
         this.total += this.weekDay * this.gearzBike[j].weekdDayPrice;
 
         if ((this.Kilometers) > (this.gearzBike[j].KmLimit * this.totaldays)) {
-
-          this.total += (this.Kilometers - this.gearzBike[j].KmLimit * this.totaldays) * 4;
+   this.total += (this.Kilometers - this.gearzBike[j].KmLimit * this.totaldays) * 4;
         }
         console.log('total price-' + this.gearzBike[j].bikeName + ' ' + this.total);
       }//use i instead of 0

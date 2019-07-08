@@ -8,11 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-<<<<<<< HEAD
     "postinstall": "ng build --prod --build-optimizer "
-=======
-    "postinstall": "ng build --prod --build-optimizer"
->>>>>>> f62f3509c3f7213a5ae839c1a990c1284d4f3f84
     
   },
   "private": true,
