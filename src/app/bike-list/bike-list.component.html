@@ -1,0 +1,94 @@
+<hr>
+<div class="container">
+  <h3>Price Calculation</h3>
+  <br>
+  <form>
+    <div class="form-group">
+      <label for="Bikes">Bike Name</label>
+      <select  value="--chooseone"class="custom-select mr-sm-2" [ngModelOptions]="{standalone: true}" [(ngModel)]="BikeName" required>
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="SuzukiGixxerSFFI2017">SuzukiGixxerSFFI2017</option>
+        <option value="HondaDio">HondaDio</option>
+        <option value="Avenger180">Avenger180</option>
+        <option value="Jupiter">Jupiter</option>
+        <option value="Passion">Passion</option>
+        
+        <option value="HondaActiva">HondaActiva</option>
+        <option value="Avenger220">Avenger220</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="overall trip length">overall trip length in Kilometers</label>
+      <input type="text" class="form-control" [(ngModel)]="Kilometers" [ngModelOptions]="{standalone: true}" required>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="dateOfpick">Pick up Date</label>
+      <input id="dateOfpick" class="form-control" name="dateOfpick" [(ngModel)]="dateOfpick" type="text" bsDatepicker
+        [ngModelOptions]="{standalone: true}" class="form-control" />
+
+    </div>
+    <timepicker [(ngModel)]="picktime" [ngModelOptions]="{standalone: true}"></timepicker>
+    <br>
+    <div class="form-group">
+      <label for="dateOfDrop">Drop Off Date</label>
+      <input class="form-control" id="dateOfDrop" name="dateOfDrop" [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="dateOfdrop" type="text" bsDatepicker class="form-control" />
+    </div>
+    <label for="dateOfTime">Drop Off Time</label>
+
+
+    <timepicker [(ngModel)]="droptime" [ngModelOptions]="{standalone: true}"></timepicker>
+    <br>
+
+    <button (click)="onSubmit()" class="btn btn-success">Submit</button>
+  </form>
+
+
+
+  <div   *ngIf="Submit">
+    <h2> Price Table</h2>
+      <h4>
+        <table style="width:90%">
+          <tr>
+            <th>Bike Name</th>
+            <th>{{BikeName}}</th> 
+          </tr>
+         
+         <tr>
+            <td>Number of Kilometers</td>
+            <td>{{Kilometers}}</td> 
+          </tr>
+        
+          <tr>
+            <td>Number Of Weekend</td>
+            <td>{{weekEnd}}</td> 
+    
+          </tr>
+          <tr>
+            <td>Number of Weekday</td>
+            <td>{{weekDay}}</td> 
+         </tr>
+         <tr>
+            <td>Total days of Rental</td>
+            <td>{{totaldays}}</td> 
+         </tr>
+         
+         <tr>
+          <th>Total Price</th>
+          <th>{{total}}</th> 
+        </tr>
+       
+
+        </table>
+     
+     
+      </h4>
+        
+    <hr>
+      
+    </div>
+
+
+
+</div>

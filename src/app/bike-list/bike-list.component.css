@@ -1,0 +1,38 @@
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+label{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.PriceCalculator{
+text-align: center;
+}
+h3
+{
+    color:black;
+}
+
+
+h4{
+    color: black;
+}
+table, th, td {
+    border: 1px solid black;
+  }
+  table
+  {
+
+    background-color: white;
+    box-shadow: 0 0 2px 2px black;
+
+
+  }
+  th, td {
+    padding: 15px;
+  }
+  h1,h2{
+    color:black;
+  }
+  .topnav
+  {box-shadow: 0 0 4px 4px ;
+  }
