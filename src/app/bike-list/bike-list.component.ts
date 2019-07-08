@@ -94,7 +94,7 @@ export class BikeListComponent implements OnInit {
     let date: Date = new Date();
     let bike1 = new GearzBike("SuzukiGixxerSFFI2017", "mh14c1548", 800, 900, 200);
     let bike2 = new GearzBike("Avenger220", "mh10c1589", 800, 900, 200);
-    let bike3 = new GearzBike("HondaDio", "mh10c1589", 500, 500, 100);
+    let bike3 = new GearzBike("HondaDio", "mh10c1589", 400, 500, 100);
     let bike4 = new GearzBike("Avenger180", "mh10c1589", 800, 900, 200);
     let bike5 = new GearzBike("HondaActiva", "mh10c1589", 400, 500, 100);
     let bike6 = new GearzBike("Jupiter", "mh10c1589", 400, 500, 100);
